@@ -12,11 +12,11 @@ if (slides.length > 0) {
 }
 
 window.addEventListener('scroll', () => {
-    const  heroText = document.querySelector('.hero-content');
-    heroText.computedStyleMap.stransform = `translateY(${window.scrollY * 0.2}px)`;
+    const heroText = document.querySelector('.hero-content');
+    heroText.style.setProperty('--parallax', `${window.scrollY * 0.2}px`);
 });
 
-const Elements = document.querySelectorAll(".servicos-card, .assText, .mapa-container");
+const Elements = document.querySelectorAll(".servico-card, .assText, .mapa-container");
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -29,6 +29,6 @@ const observer = new IntersectionObserver((entries) => {
 Elements.forEach(el => observer.observe(el));
 
 window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".navbar");
-  nav.classList.toggle("scrolled", window.scrollY > 80);
+    const nav = document.querySelector(".navbar");
+    nav.classList.toggle("scrolled", window.scrollY > 80);
 });
