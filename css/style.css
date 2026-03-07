@@ -160,7 +160,7 @@ body {
 }
 
 .hero-content h1 span {
-  color: #d4af37;
+  color: #ffd700;
 }
 
 .hero-content h1 {
@@ -230,7 +230,7 @@ body {
 }
 
 .servicos {
-  padding: 120px 60px;
+  padding: 70px 80px;
   background: #111;
   color: white;
 }
@@ -252,7 +252,7 @@ body {
 }
 
 .btn-servico {
-  color:#d4af37;
+  color: #ffd700;
 }
 
 .servicos-grid {
@@ -366,172 +366,201 @@ body {
 .assinatura {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  padding: 50px 20px;
-  background: #111;
+  align-items: center;
+  gap: 80px;
+  padding: 60px 100px;
+  background: #0f0f0f;
 }
 
 .assImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  max-width: 560px;
 }
 
 .assImage img {
-  width: 85%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-left: 40px;
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.assImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  pointer-events: none;
 }
 
 .assImage img:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(1.03);
 }
 
 .assText {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 22px;
+  padding: 70px;
+  color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: white;
-  max-width: 500px;
-  gap: 25px;
-  background: #252424;
-  padding: 50px;
-  border-radius: 18px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.08);
+  gap: 28px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+}
+
+.assText::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 4px;
+  height: 70px;
+  background: #ffd700;
+  border-radius: 4px;
+}
+
+.tag {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffd700;
 }
 
 .assText h1 {
   font-size: 48px;
-  margin-bottom: 20px;
-  line-height: 1.1;
+  line-height: 1.05;
+  text-transform: uppercase;
 }
 
 .assText p {
-  font-size: 20px;
-  line-height: 1.6;
-  color: yellow;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.beneficios li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .assText a {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 40px;
-  background: linear-gradient(45deg, #ffd700, #ffb700);
+  align-self: flex-start;
+  padding: 14px 36px;
+  background: #ffd700;
   color: black;
   font-weight: 700;
-  border-radius: 10px;
+  border-radius: 8px;
   text-decoration: none;
-  font-size: 20px;
-  text-align: center;
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
-.assText a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 40%;
-  height: 100%;
-  background: black;
-  transform: skewX(-20deg);
-  transition: left 0.6s ease, background 0.4s ease;
-  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .assText a:hover {
-  background: black;
-  color: white;
-}
-
-.assText a:hover::before {
-  left: 130%;
-  background: #ffd700;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
 }
 
 .localizacao {
-  padding: 60px 20px;
-  color: white;
+  padding: 40px 20px;
   text-align: center;
-  background: #1a1a1a;
+  background: #0f0f0f;
+  color: #fff;
 }
 
-.localizacao h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
+.localizacao-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.localizacao-header p {
+  margin-top: 10px;
+  color: #999;
+  font-size: 18px;
 }
 
 .mapa-container {
-  margin-top: 40px;
+  margin: 60px auto;
   width: 100%;
-  max-width: 900px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1000px;
+  height: 420px;
   border-radius: 20px;
   overflow: hidden;
-  border: 2px solid rgba(255, 230, 0, 0.908);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.9s ease;
+  border: 2px solid #ffd700;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease;
 }
 
 .mapa-container:hover {
   transform: scale(1.01);
-  transition: transform 0.3s ease;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+}
+
+.info-local {
+  margin-top: 30px;
+}
+
+.endereco {
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.rota-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #ffd700;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.rota-btn:hover {
+  background: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
 }
 
 .redes {
-  padding: 60px 20px;
-  text-align: center;
+  margin-top: 50px;
+}
+
+.redes h3 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
 .rede-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
-.redes h3 {
-  font-size: 34px;
-  margin-bottom: 20px;
-}
-
 .rede-container a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 22px;
-  background: transparent;
+  padding: 14px 28px;
+  border: 1px solid #ffd700;
   color: #ffd700;
   text-decoration: none;
   font-weight: 600;
   border-radius: 12px;
   transition: 0.3s ease;
-  font-weight: 600;
-}
-
-.rede-container a svg {
-  width: 20px;
-  height: 20px;
 }
 
 .rede-container a:hover {
-  background: black;
-  color: #ffd700;
+  background: #ffd700;
+  color: #000;
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
 }
 
 footer {
