@@ -41,11 +41,9 @@ body {
   justify-content: space-between;
 }
 
-.logo {
-  color: #ffd700;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 1px;
+.logo img {
+  width: 80px;
+  border-radius: 8px;
 }
 
 .nav-links {
@@ -121,13 +119,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-size: cover;
-  background-position: center;
+  background-position: 50% 70%;
   border-radius: 16px;
   box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
   z-index: 1;
   will-change: opacity, transform;
+  filter: brightness(0.9) contrast(1.05);
 }
 
 .slide.active {
@@ -291,7 +290,8 @@ body {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 65%;
+  background-repeat: no-repeat;
   transition: transform 0.8s ease, filter 0.8s ease;
   z-index: 1;
 }
