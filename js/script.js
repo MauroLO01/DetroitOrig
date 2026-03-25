@@ -1,48 +1,57 @@
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
+let sliderInterval = null;
+
+function activateSlide(index) {
+  if (!slides.length) return;
+
+  slides.forEach(slide => {
+    slide.classList.remove("active", "zoom");
+  });
+
+  const next = slides[index];
+
+  if (!next) return;
+
+  next.classList.add("active");
+
+  void next.offsetWidth;
+
+  next.classList.add("zoom");
+}
+
+function nextSlide() {
+  if (!slides.length) return;
+
+  currentSlide = (currentSlide + 1) % slides.length;
+  activateSlide(currentSlide);
+}
 
 function startSlider() {
   if (!slides.length) return;
 
-  slides[currentSlide].classList.add("active");
-
-  setInterval(() => {
-    slides[currentSlide].classList.remove("active");
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add("active");
-  }, 9000);
+  activateSlide(currentSlide);
+  sliderInterval = setInterval(nextSlide, 9000);
 }
+
+document.addEventListener("visibilitychange", () => {
+  if (!slides.length) return; // 🛑 impede bug
+
+  if (document.hidden) {
+    clearInterval(sliderInterval);
+  } else {
+    sliderInterval = setInterval(nextSlide, 9000);
+  }
+});
 
 startSlider();
 
-const heroContent = document.querySelector(".hero-content");
+const heroContent = document.querySelector(".hero-content, .srv-hero-content");
 
 function handleParallax() {
   if (!heroContent) return;
   heroContent.style.setProperty("--parallax", `${window.scrollY * 0.2}px`);
 }
-
-window.addEventListener("scroll", handleParallax);
-
-const animatedElements = document.querySelectorAll(
-  ".servico-card, .assText, .mapa-container"
-);
-
-const observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target); // evita processamento desnecessário
-      }
-    });
-  },
-  {
-    threshold: 0.2
-  }
-);
-
-animatedElements.forEach(el => observer.observe(el));
 
 const navbar = document.querySelector(".navbar");
 
@@ -51,4 +60,33 @@ function handleNavbarScroll() {
   navbar.classList.toggle("scrolled", window.scrollY > 80);
 }
 
-window.addEventListener("scroll", handleNavbarScroll);
+let scrollTicking = false;
+
+window.addEventListener("scroll", () => {
+  if (!scrollTicking) {
+    requestAnimationFrame(() => {
+      handleParallax();
+      handleNavbarScroll();
+      scrollTicking = false;
+    });
+    scrollTicking = true;
+  }
+});
+
+const animatedElements = document.querySelectorAll(
+  ".servico, .assText, .mapa-container"
+);
+
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        obs.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+animatedElements.forEach(el => observer.observe(el));

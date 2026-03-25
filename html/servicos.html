@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Serviços da Detroit Barbearia — Corte, Barba, Combo e Plano Mensal. Estilo urbano, técnica precisa.">
+    <title>Serviços — Detroit Barbearia</title>
+
+    <link rel="shortcut icon" href="../assets/LogoDetroit.png" type="image/x-icon">
+    <link rel="preload" as="image" href="../assets/Corte1Detroit.png">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/serv.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../assets/LogoDetroit.jpg" alt="Logo Detroit" width="70" height="70">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html" class="nav-active">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="agendar.html">Agendar</a></li>
+                </ul>
+                <a href="#plano" class="cta">Assinar</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="srv-hero">
+        <div class="srv-hero-bg" style="background-image: url('../assets/Corte1Detroit.png');"></div>
+        <div class="srv-hero-overlay"></div>
+
+        <!-- Número decorativo de fundo -->
+        <div class="srv-hero-deco" aria-hidden="true">Detroit</div>
+
+        <div class="srv-hero-content">
+            <span class="srv-label">O que oferecemos</span>
+            <h1>
+                Serviços<br>
+                <em>Detroit</em>
+            </h1>
+            <p>Cada detalhe pensado.<br>Cada corte, uma afirmação.</p>
+
+            <nav class="srv-hero-nav" aria-label="Ir para seção">
+                <a href="#cortes">Cortes</a>
+                <span aria-hidden="true">·</span>
+                <a href="#barba">Barba</a>
+                <span aria-hidden="true">·</span>
+                <a href="#combo">Combo</a>
+                <span aria-hidden="true">·</span>
+                <a href="#plano">Clube</a>
+            </nav>
+        </div>
+
+        <div class="srv-scroll-indicator" aria-hidden="true">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- CORTES
+         Melhorias: itens em lista com número grande, linha divisória, preço e hover marcante -->
+    <section class="srv-section" id="cortes">
+        <div class="srv-section-label">
+            <span>01</span>
+            <hr>
+            <p>Cortes</p>
+        </div>
+
+        <div class="srv-list">
+
+            <a href="agendar.html" class="srv-item">
+                <div class="srv-item-num" aria-hidden="true">01</div>
+                <div class="srv-item-left">
+                    <h3>Corte Premium</h3>
+                    <p>Degradê preciso com acabamento na navalha.</p>
+                </div>
+                <div class="srv-item-right">
+                    <span class="srv-item-price">R$ 45</span>
+                    <span class="srv-item-arrow" aria-hidden="true">→</span>
+                </div>
+            </a>
+
+            <a href="agendar.html" class="srv-item">
+                <div class="srv-item-num" aria-hidden="true">02</div>
+                <div class="srv-item-left">
+                    <h3>Corte Navalhado</h3>
+                    <p>Linhas limpas e presença marcante.</p>
+                </div>
+                <div class="srv-item-right">
+                    <span class="srv-item-price">R$ 50</span>
+                    <span class="srv-item-arrow" aria-hidden="true">→</span>
+                </div>
+            </a>
+
+            <a href="agendar.html" class="srv-item">
+                <div class="srv-item-num" aria-hidden="true">03</div>
+                <div class="srv-item-left">
+                    <h3>Corte Infantil</h3>
+                    <p>Cuidado e precisão para os pequenos.</p>
+                </div>
+                <div class="srv-item-right">
+                    <span class="srv-item-price">R$ 35</span>
+                    <span class="srv-item-arrow" aria-hidden="true">→</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="srv-divider" aria-hidden="true">
+        <span>✦</span><span>Detroit</span><span>✦</span>
+    </div>
+
+    <!-- BARBA -->
+    <section class="srv-section srv-section--reverse" id="barba">
+        <div class="srv-section-label">
+            <span>02</span>
+            <hr>
+            <p>Barba</p>
+        </div>
+
+        <div class="srv-cards-grid srv-cards-grid--2col">
+
+            <article class="srv-card srv-card--img">
+                <div class="srv-card-img" style="background-image: url('../assets/corteDetroit5.png');"></div>
+                <div class="srv-card-body">
+                    <h2>Barba Completa</h2>
+                    <p>Ritual completo com toalha quente e acabamento premium.</p>
+                    <a href="agendar.html" class="srv-card-cta">Agendar</a>
+                </div>
+            </article>
+
+            <article class="srv-card srv-card--icon">
+                <div class="srv-card-icon">✂</div>
+                <div class="srv-card-body">
+                    <h2>Aparar Barba</h2>
+                    <p>Manutenção rápida e precisa para manter o estilo.</p>
+                    <a href="agendar.html" class="srv-card-cta">Agendar</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="srv-divider" aria-hidden="true">
+        <span>✦</span><span>Detroit</span><span>✦</span>
+    </div>
+
+    <!-- COMBO -->
+    <section class="srv-section" id="combo">
+        <div class="srv-section-label">
+            <span>03</span>
+            <hr>
+            <p>Combo</p>
+        </div>
+
+        <div class="srv-cards-grid">
+            <article class="srv-card srv-card--img srv-card--wide">
+                <div class="srv-card-img" style="background-image: url('../assets/barbeiro1.png');"></div>
+                <div class="srv-card-body">
+                    <div class="srv-card-badge">Mais Pedido</div>
+                    <h2>Combo Detroit</h2>
+                    <p>Corte + Barba completa em uma única experiência premium.</p>
+                    <a href="agendar.html" class="srv-card-cta">Agendar</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="srv-clube" id="plano">
+
+        <!-- Brilho decorativo de fundo -->
+        <div class="srv-clube-glow" aria-hidden="true"></div>
+
+        <div class="srv-clube-inner">
+
+            <div class="srv-clube-text">
+                <span class="srv-label">Exclusivo</span>
+
+                <h2>Clube<br>Detroit</h2>
+
+                <p>
+                    Um plano pensado para quem não abre mão de presença constante.
+                    Prioridade no agendamento, cortes recorrentes e benefícios que crescem com o tempo.
+                </p>
+
+                <ul class="srv-clube-beneficios">
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <polyline points="4,10 8,14 16,6" stroke="#ffd700" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Cortes ilimitados no mês
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <polyline points="4,10 8,14 16,6" stroke="#ffd700" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Atendimento prioritário
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <polyline points="4,10 8,14 16,6" stroke="#ffd700" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Descontos exclusivos
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <polyline points="4,10 8,14 16,6" stroke="#ffd700" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Benefícios especiais para membros
+                    </li>
+                </ul>
+
+                <a href="agendar.html" class="srv-clube-cta">Tornar-se membro</a>
+
+                <p class="srv-clube-nota">Cancele quando quiser. Sem taxa de adesão.</p>
+            </div>
+
+            <div class="srv-clube-img">
+                <img src="../assets/corteDetroit4.png" alt="Atendimento premium do Clube Detroit">
+
+                <div class="srv-clube-tag">
+                    <span>Clube</span>
+                    <strong>Detroit</strong>
+                </div>
+
+                <div class="srv-clube-badge" aria-hidden="true">
+                    Plano<br>Exclusivo
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="srv-cta-final">
+        <div class="srv-cta-final-inner">
+            <h2>Pronto para a experiência?</h2>
+            <p>Agende agora e sinta a diferença.</p>
+            <a href="agendar.html" class="btn">Agendar Horário</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h3>Detroit Barbearia</h3>
+            <p>Estilo. Presença. Identidade.</p>
+            <p class="copy">&copy; 2026 Detroit Barbearia</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/servicos.js"></script>
+
+</body>
+
+</html>

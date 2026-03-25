@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detroit Barbearia</title>
+    <meta name="description"
+        content="Detroit Barbearia — Cortes premium, barba e plano mensal por assinatura em Cidade Ocidental, GO. Estilo urbano, técnica precisa.">
+    <title>Detroit Barber</title>
+    <link rel="shortcut icon" href="../assets/LogoDetroit.jpg" type="image/x-icon">
+    <link rel="preload" as="image" href="../assets/Corte2Detroit.png">
+
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -15,9 +18,8 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="../assets/LogoDetroit.jpg" alt="Logo da barbearia">
+                    <img src="../assets/LogoDetroit.jpg" alt="Logo da Detroit Barbearia" width="80" height="80">
                 </div>
-
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
@@ -25,34 +27,30 @@
                     <li><a href="contato.html">Contato</a></li>
                     <li><a href="agendar.html">Agendar</a></li>
                 </ul>
-
                 <a href="#assinatura" class="cta">Assinar</a>
-
             </div>
         </nav>
     </header>
+
     <section class="hero">
         <div class="carousel">
-            <div class="slide.active" style="background-image: url(../assets/Corte2Detroit.png);"></div>
-            <div class="slide" style="background-image: url(../assets/Corte2Detroit.png);"></div>
-            <div class="slide" style="background-image: url(../assets/barbearia.png);"></div>
+            <div class="slide-active" style="background-image: url('../assets/barbearia.png');"></div>
+            <div class="slide" style="background-image: url('../assets/Corte2Detroit.png');"></div>
+            <div class="slide" style="background-image: url('../assets/barbearia.png');"></div>
         </div>
-
         <div class="hero-content">
             <h1>Mais que um corte,<br><span>uma experiência</span></h1>
-            <p class="hero-sub"> Tradição. Estilo. Presença.</p>
-            <a href="#" class="btn">Agende Seu Horário</a>
+            <p class="hero-sub">Tradição. Estilo. Presença.</p>
+            <a href="agendar.html" class="btn">Agende Seu Horário</a>
         </div>
     </section>
-    <section class="servicos">
 
+    <section class="servicos">
         <div class="servicos-header">
             <h2>Experiência <span class="btn-servico">Detroit</span></h2>
             <p>Estilo urbano. Técnica precisa.</p>
         </div>
-
         <div class="servicos-grid">
-
             <div class="servico destaque">
                 <div class="img" style="background-image: url('../assets/Corte1Detroit.png')"></div>
                 <div class="overlay">
@@ -60,14 +58,12 @@
                     <span>Precisão e presença</span>
                 </div>
             </div>
-
             <div class="servico">
                 <div class="img" style="background-image: url('../assets/BarbaDetroit.png')"></div>
                 <div class="overlay">
                     <h3>Barba</h3>
                 </div>
             </div>
-
             <div class="servico">
                 <div class="img" style="background-image: url('../assets/LogoDetroit.jpg')"></div>
                 <div class="overlay">
@@ -75,77 +71,72 @@
                 </div>
             </div>
         </div>
-
         <a href="servicos.html" class="ver-mais">Explorar todos</a>
-
     </section>
 
-    <section class="assinatura">
-
+    <section class="assinatura" id="assinatura">
         <div class="assImage">
-            <img src="../assets/Corte2Detroit.png" alt="Clube Detroit">
+            <img src="../assets/Corte2Detroit.png" alt="Clube Detroit — plano de assinatura exclusivo">
         </div>
-
         <div class="assText">
             <span class="tag">Clube Exclusivo</span>
-            <h1>Clube Detroit</h1>
+            <h2>Clube Detroit</h2>
             <p>Um plano pensado para quem mantém presença constante e valoriza experiência acima do comum.</p>
-
             <ul class="beneficios">
                 <li>Cortes recorrentes</li>
                 <li>Atendimento prioritário</li>
                 <li>Benefícios exclusivos</li>
             </ul>
-
-            <a href="#">Tornar-se membro</a>
+            <a href="agendar.html">Tornar-se membro</a>
         </div>
-
     </section>
-    <section class="localizacao">
 
+    <section class="localizacao">
         <div class="localizacao-header">
             <h2>Visite a Detroit</h2>
             <p>Onde tradição encontra atitude.</p>
         </div>
-
         <div class="mapa-container">
-            <iframe title="Localização da Barbearia Detroit"
+            <iframe title="Localização da Barbearia Detroit" tabindex="0"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1916.675835835689!2d-47.942857499999995!3d-16.099098899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9359850b5dee513d%3A0x7a41702029aefa04!2sBARBEARIA%20DETROIT%20SUA%20BARBEARIA%20POR%20ASSINATURA!5e0!3m2!1spt-BR!2sbr!4v1771383302032!5m2!1spt-BR!2sbr"
                 width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-
         <div class="info-local">
-            <p class="endereco">📍 Qd: 09 Lote 13, Loja 01 - Parque Nova Friburgo B, Cidade Ocidental</p>
+            <p class="endereco">
+                <span aria-hidden="true">📍</span>
+                Qd: 09 Lote 13, Loja 01 - Parque Nova Friburgo B, Cidade Ocidental
+            </p>
             <a class="rota-btn"
                 href="https://www.google.com/maps/dir/?api=1&destination=Qd+09+Lote+13,+Loja+01+-+Parque+Nova+Friburgo+B,+Cidade+Ocidental+-+GO,+72887-226"
-                target="_blank" rel="noopener noreferrer">
+                target="_blank" rel="noopener noreferrer"
+                aria-label="Abrir rota para a Detroit Barbearia no Google Maps">
                 Traçar Rota
             </a>
         </div>
-
         <div class="redes">
             <h3>Siga a Experiência</h3>
-
             <div class="rede-container">
-                <a href="https://wa.me/+5561985825238" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+5561985825238" target="_blank" rel="noopener noreferrer"
+                    aria-label="Fale conosco pelo WhatsApp">
                     WhatsApp
                 </a>
-
-                <a href="https://www.instagram.com/barbeariaadetroit/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/barbeariaadetroit/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Siga a Detroit Barbearia no Instagram">
                     Instagram
                 </a>
             </div>
         </div>
-
     </section>
+
     <footer>
         <div class="footer-content">
             <h3>Detroit Barbearia</h3>
             <p>Estilo. Presença. Identidade.</p>
-            <p class="copy">&copy; 2026 Detroit Barbearia. Direitos reservados..</p>
+            <p class="copy">&copy; 2026 Detroit Barbearia. Direitos reservados.</p>
         </div>
     </footer>
+
     <script src="../js/script.js"></script>
 </body>
 
