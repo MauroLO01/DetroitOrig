@@ -1,31 +1,22 @@
-const revealElements = document.querySelectorAll("[data-reveal]");
-
-const revealObserver = new IntersectionObserver(
-  (entries, obs) => {
+const observeReveal = (elements, options = { threshold: 0.15 }) => {
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${Math.random() * 0.2}s`;
         entry.target.classList.add("revealed");
         obs.unobserve(entry.target);
       }
     });
-  },
-  { threshold: 0.15 }
-);
+  }, options);
 
-revealElements.forEach(el => revealObserver.observe(el));
+  elements.forEach(el => observer.observe(el));
+};
 
-const clubeElements = document.querySelectorAll(".srv-clube-text, .srv-clube-img");
+// Elementos genéricos
+observeReveal(document.querySelectorAll("[data-reveal]"));
 
-const clubeObserver = new IntersectionObserver(
-  (entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("revealed");
-        obs.unobserve(entry.target);
-      }
-    });
-  },
+// Clube com threshold diferente
+observeReveal(
+  document.querySelectorAll(".srv-clube-text, .srv-clube-img"),
   { threshold: 0.2 }
 );
-
-clubeElements.forEach(el => clubeObserver.observe(el));

@@ -690,8 +690,9 @@ body {
 .srv-cta-final-inner {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 14px;
+    gap: 25px;
 }
 
 .srv-cta-final h2 {
@@ -719,6 +720,7 @@ body {
     text-decoration: none;
     transition: transform 0.3s, box-shadow 0.3s;
     display: inline-block;
+    margin: auto;
 }
 
 .btn:hover {
