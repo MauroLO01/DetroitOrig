@@ -19,7 +19,7 @@ body {
     color: white;
 }
 
-/* ── HERO ────────────────────────────────── */
+/* ── HERO ── */
 .srv-hero {
     position: relative;
     min-height: calc(100vh - var(--navbar-height));
@@ -34,7 +34,6 @@ body {
     background-size: cover;
     background-position: center;
     filter: brightness(0.7);
-    /* Leve zoom de entrada */
     animation: heroBgZoom 10s ease-out forwards;
 }
 
