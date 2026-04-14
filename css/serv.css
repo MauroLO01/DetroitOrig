@@ -752,7 +752,30 @@ footer {
     color: #444;
 }
 
-/* ── RESPONSIVO ──────────────────────────── */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.menu-toggle:hover {
+    color: var(--gold);
+}
+
+.menu-toggle::before {
+    content: "☰";
+}
+
+.menu-toggle.active::before {
+    content: "✕";
+}
+
 @media (max-width: 900px) {
     .nav-links {
         display: none;
@@ -801,6 +824,52 @@ footer {
 
     .srv-item-num {
         font-size: 11px;
+    }
+
+    .nav-container {
+        padding: 0 16px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .cta {
+        order: 3;
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.97);
+        backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(255, 215, 0, 0.1);
+        padding: 16px 0 24px;
+        gap: 0;
+        z-index: 999;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
 }
 
