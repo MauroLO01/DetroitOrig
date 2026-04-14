@@ -27,6 +27,7 @@ body {
     z-index: 1000;
     padding: 24px 0;
     backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(255, 215, 0, 0.08);
 }
