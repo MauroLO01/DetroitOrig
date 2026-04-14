@@ -104,7 +104,9 @@ body {
 
 .hero {
     position: relative;
-    height: 90vh;
+    min-height: 90vh;
+    height: auto;
+    padding: 80px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -590,4 +592,215 @@ footer {
 .show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-toggle::before {
+    content: "☰";
+}
+
+.menu-toggle.open::before {
+    content: "✕";
+}
+
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0 24px;
+    }
+
+    .servicos {
+        padding: 50px 24px;
+    }
+
+    .assinatura {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px 24px;
+    }
+
+    .assImage {
+        max-width: 100%;
+    }
+
+    .assText {
+        padding: 40px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+    .cta {
+        order: 3;
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px 24px;
+        gap: 20px;
+        max-height: calc(100vh - var(--navbar-height));
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 90vh;
+        height: auto;
+        padding: 80px 0;
+    }
+
+    .hero-content {
+        left: 0;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hero-content h1 {
+        font-size: clamp(32px, 9vw, 56px);
+    }
+
+    .hero-sub {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 14px clamp(20px, 6vw, 32px);
+        font-size: 15px;
+    }
+
+    .servicos {
+        padding: 40px 16px;
+    }
+
+    .servicos-header h2 {
+        font-size: 36px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .servico.destaque {
+        grid-row: span 1;
+    }
+
+    .assinatura {
+        padding: 40px 16px;
+        gap: 28px;
+    }
+
+    .assText {
+        padding: 32px 24px;
+        gap: 20px;
+    }
+
+    .assText h2 {
+        font-size: 32px;
+    }
+
+    .assText::before {
+        top: 32px;
+    }
+
+    .mapa-container {
+        height: clamp(250px, 40vw, 320px);
+        margin: 32px auto;
+    }
+
+    .localizacao-header h2 {
+        font-size: 32px;
+    }
+
+    .rede-container {
+        gap: 16px;
+    }
+
+    .servicos-header {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .overlay {
+        left: 20px;
+        right: 20px;
+    }
+
+    .overlay::before {
+        display: none;
+    }
+
+    .ver-mais {
+        display: block;
+        text-align: center;
+        width: fit-content;
+        margin: 40px auto 0;
+    }
+
+    .assText {
+        text-align: center;
+        align-items: center;
+    }
+
+    .assText::before {
+        display: none;
+    }
+
+    .assText a {
+        align-self: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .assText {
+        padding: 24px 16px;
+    }
+
+    .rede-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
