@@ -28,7 +28,7 @@
 .agendamento::after {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: -40px 0 0 0;
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
@@ -44,7 +44,7 @@
     }
 
     to {
-        transform: translateY(40px);
+        transform: translateY(-40px);
     }
 }
 
@@ -151,5 +151,54 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .agendamento {
+        padding: 80px 16px 40px;
+        min-height: 100vh;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .agendamento h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .agendar {
+        padding: 40px 24px;
+    }
+
+    .agendar h2 {
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+
+    .agendar::before {
+        top: 40px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .agendar {
+        padding: 32px 16px;
+    }
+
+    .agendar h2 {
+        font-size: 26px;
+    }
+
+    .agendar button {
+        padding: 14px;
+        font-size: 14px;
     }
 }
